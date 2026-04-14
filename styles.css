@@ -109,6 +109,11 @@ nav {
 }
 
 /* ===== HERO SECTION ===== */
+#hero {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -515,11 +520,25 @@ footer a:hover img {
 
 /* ===== MOBILE MEDIA QUERY (up to 767px) ===== */
 @media (max-width: 767px) {
+  /* Hero section padding - FIXED */
+  #hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Larger skill description text - FIXED */
+  .skill p {
+    font-size: 15px;
+  }
+
+  /* Contact section spacing - IMPROVED */
   #contact p {
     flex-direction: column;
     gap: 5px;
+    margin: 25px 0;
   }
 
+  /* Resume section adjustments */
   #resume {
     margin: 40px 20px;
     padding: 40px 20px;
@@ -530,6 +549,7 @@ footer a:hover img {
     font-size: 16px;
   }
 
+  /* About section adjustments */
   #about {
     padding: 40px 20px;
     margin: 20px;
@@ -537,5 +557,25 @@ footer a:hover img {
 
   #about h2 {
     font-size: 32px;
+  }
+
+  /* About paragraph text - improved readability */
+  #about p {
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 0 10px;
+  }
+
+  /* Hero text padding for better reading */
+  .hero-text {
+    padding: 0 5px;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
   }
 }
