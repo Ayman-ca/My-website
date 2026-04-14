@@ -30,6 +30,7 @@ body {
   color: var(--text-main);
   font-family: "Overlock", sans-serif;
   margin: 0;
+    padding: 0 25px;
   overflow-x: hidden;
 }
 
