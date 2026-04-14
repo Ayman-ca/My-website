@@ -88,6 +88,7 @@ nav {
   padding: 8px 0;
   position: relative;
   font-family: "Playwrite NZ Basic", sans-serif;
+  font-size: 18px;
 }
 
 .nav-links a::after {
@@ -110,35 +111,40 @@ nav {
 
 /* ===== HERO SECTION ===== */
 #hero {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
   animation: fadeUp 1s ease forwards;
 }
 
 .hero-text h2 {
   font-family: "Merienda", cursive;
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
 .hero-text p {
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 #hero button {
   background-color: var(--color-alert);
   color: var(--text-light);
   border: none;
-  padding: 14px 28px;
+  padding: 16px 32px;
   border-radius: 40px;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 #hero button:hover {
@@ -219,6 +225,14 @@ nav {
   }
 }
 
+#about p {
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ===== SKILLS SECTION ===== */
 .skills-grid {
   display: grid;
@@ -239,11 +253,11 @@ nav {
   text-align: center;
   margin-bottom: 40px;
   font-family: "Merienda", cursive;
-  font-size: 36px;
+  font-size: 42px;
 }
 
 .skill i {
-  font-size: 48px;
+  font-size: 52px;
   margin-bottom: 20px;
   color: var(--color-alert);
 }
@@ -251,12 +265,12 @@ nav {
 .skill h3 {
   font-family: "Playwrite NZ Basic", sans-serif;
   margin-bottom: 10px;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .skill p {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.6;
   opacity: 0.9;
 }
 
@@ -274,7 +288,7 @@ nav {
 
 #contact h2 {
   font-family: "Merienda", cursive;
-  font-size: 36px;
+  font-size: 42px;
   margin-bottom: 30px;
   position: relative;
   display: inline-block;
@@ -300,7 +314,7 @@ nav {
 
 #contact p {
   margin: 20px 0;
-  font-size: 18px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -317,6 +331,7 @@ nav {
   text-decoration: none;
   position: relative;
   font-weight: bold;
+  font-size: 20px;
 }
 
 #contact a::after {
@@ -336,13 +351,13 @@ nav {
 
 #contact p:first-of-type::before {
   content: "✉️";
-  font-size: 24px;
+  font-size: 26px;
   margin-right: 10px;
 }
 
 #contact p:last-of-type::before {
   content: "🔗";
-  font-size: 24px;
+  font-size: 26px;
   margin-right: 10px;
 }
 
@@ -360,7 +375,7 @@ nav {
 
 #resume h2 {
   font-family: "Merienda", cursive;
-  font-size: 36px;
+  font-size: 42px;
   margin-bottom: 20px;
   background: linear-gradient(135deg, #f97316, #fdba74);
   background-clip: text;
@@ -372,13 +387,13 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 14px 35px;
+  padding: 16px 40px;
   background: linear-gradient(135deg, #f97316, #fdba74);
   color: #1e293b;
   text-decoration: none;
   border-radius: 50px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -388,7 +403,7 @@ nav {
 
 #resume a::before {
   content: "📄";
-  font-size: 20px;
+  font-size: 22px;
   transition: transform 0.3s ease;
 }
 
@@ -445,6 +460,10 @@ footer::before {
 footer a:hover img {
   transform: scale(1.1);
   filter: drop-shadow(0 5px 15px rgba(249, 115, 22, 0.5));
+}
+
+footer p {
+  font-size: 16px;
 }
 
 /* ===== ANIMATIONS ===== */
@@ -513,69 +532,103 @@ footer a:hover img {
   }
 
   #hero button {
-    padding: 16px 36px;
-    font-size: 18px;
+    padding: 18px 40px;
+    font-size: 20px;
   }
 }
 
 /* ===== MOBILE MEDIA QUERY (up to 767px) ===== */
 @media (max-width: 767px) {
-  /* Hero section padding - FIXED */
+  /* Hero section - MORE padding from edges */
   #hero {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
-  /* Larger skill description text - FIXED */
+  /* Hero heading */
+  .hero-text h2 {
+    font-size: 32px;
+  }
+
+  /* Hero paragraphs - LARGER and BOLDER */
+  .hero-text p {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.7;
+  }
+
+  /* Hero button */
+  #hero button {
+    padding: 14px 28px;
+    font-size: 17px;
+  }
+
+  /* Skills section */
   .skill p {
     font-size: 15px;
   }
 
-  /* Contact section spacing - IMPROVED */
-  #contact p {
-    flex-direction: column;
-    gap: 5px;
-    margin: 25px 0;
+  .skill h3 {
+    font-size: 22px;
   }
 
-  /* Resume section adjustments */
+  .skill i {
+    font-size: 44px;
+  }
+
+  #skills h2 {
+    font-size: 34px;
+  }
+
+  /* Contact section */
+  #contact p {
+    flex-direction: column;
+    gap: 8px;
+    margin: 25px 0;
+    font-size: 18px;
+  }
+
+  #contact a {
+    font-size: 18px;
+  }
+
+  #contact h2 {
+    font-size: 34px;
+  }
+
+  /* Resume section */
   #resume {
     margin: 40px 20px;
     padding: 40px 20px;
   }
 
-  #resume a {
-    padding: 12px 25px;
-    font-size: 16px;
+  #resume h2 {
+    font-size: 34px;
   }
 
-  /* About section adjustments */
+  #resume a {
+    padding: 14px 28px;
+    font-size: 17px;
+  }
+
+  /* About section */
   #about {
     padding: 40px 20px;
     margin: 20px;
   }
 
   #about h2 {
-    font-size: 32px;
+    font-size: 34px;
   }
 
-  /* About paragraph text - improved readability */
   #about p {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.7;
     padding: 0 10px;
   }
 
-  /* Hero text padding for better reading */
+  /* Hero text container */
   .hero-text {
     padding: 0 5px;
-  }
-
-  .hero-text h2 {
-    font-size: 28px;
-  }
-
-  .hero-text p {
-    font-size: 15px;
   }
 }
